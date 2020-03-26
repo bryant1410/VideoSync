@@ -31,3 +31,21 @@ The front end utilizes HTML5, Bootstrap, JavaScript, and the YouTube Player API.
 * **Fourier Transform of Audio Signal:** Split audio into bins and apply the Fourier transform on each bin using the **numpy** library. The Fourier transform converts each bin data from the time domain to the frequency domain.
 * **Peak Frequencies:** Identify the frequency with the highest intensity in each bin to create a peak frequency constellation.
 * **Frequency Constellation Alignment:** Determine time offset by aligning frequency constellations of the two audio files. 
+
+## Installation
+
+Use Python 3.5+, and have ffmpeg and GSL headers installed:
+
+```bash
+pip install -r requirements.txt
+# The following one needs some reqs at build time, that's why it goes after:
+pip install git+https://github.com/sauliusl/mlpy@dd7f5ce
+```
+
+## Run
+
+```bash
+export FLASK_APP=video_sync
+export FLASK_ENV=development
+flask run
+```
